@@ -1,0 +1,375 @@
+/* Styles across all pages */
+body {
+  color: white;
+  background-color: #203627;
+  margin: 0;
+  font-family: 'Blinker', sans-serif;
+}
+h1 {
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #ffb000;
+  margin-top: 0;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #999999;
+  word-spacing: 0.1rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Nav Bar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.nav-bar {
+  backdrop-filter: blur(40px) brightness(60%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-title {
+  margin-bottom: 0;
+  font-size: 2.5rem;
+}
+.nav-bar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 25px 0px;
+  box-sizing: border-box;
+  height: 80px;
+}
+.nav-link:hover {
+  border-bottom: 5px #CE8B00 solid;
+  color: #CE8B00;
+}
+.nav-link-active {
+  border-bottom: 5px #ffb000 solid;
+  color: #ffb000;
+}
+.nav-link a {
+  text-decoration: none;
+  color: inherit;
+  padding: 25px 40px;
+  padding-bottom: 31px;
+}
+
+/* Nav bar menu button that shows at 1090px or less*/
+.toggle-button {
+  position: absolute;
+  padding: 10px;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (width < 1090px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .nav-link.active {
+    display: list-item;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-link a {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+
+  .nav-title {
+    padding-bottom: 20px;
+  }
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Welcome Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.welcome-body {
+  background-image: url("images/rig.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.welcome-main-container {
+  background-color: #1a1d1b;
+  width: 55%;
+  padding: 50px;
+  margin: 50px 0;
+}
+
+.welcome-title {
+  margin-bottom: 50px;
+}
+
+.welcome-paragraph {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.deeprock-emblem {
+  float: right;
+  padding-left: 30px;
+  width: 37%;
+}
+
+@media (width < 900px) {
+  .deeprock-emblem {
+    float: none;
+    width: 80%;
+    padding-bottom: 20px;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ The Job Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.job-body {
+  background-image: url("images/ice-cave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.job-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-main-container {
+  background-color: #1a1d1b;
+  width: 55%;
+  padding: 50px;
+  margin: 50px 0;
+}
+
+/* Shared attributes in sections */
+.job-sections {
+  min-height: 287px;
+}
+.job-description {
+  font-size: 1.2rem;
+}
+.job-img {
+  width: 43%;
+  padding-bottom: 10px;
+}
+.hr-job {
+  margin: 60px 0px;
+  border-color: #8C6000;
+}
+
+/* Section images */
+.teamwork-img {
+  float: left;
+  padding-right: 20px;
+}
+.mining-img {
+  float: right;
+  padding-left: 20px;
+}
+.cave-img {
+  float: left;
+  padding-right: 20px;
+}
+.company-img {
+  float: right;
+  padding-left: 20px;
+}
+
+@media (width < 1300px) {
+  .job-img {
+    float: none;
+    width: 80%;
+    padding: 0;
+  }
+
+  .company-img {
+    float: none;
+    width: 40%;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Career Path Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.career-path-body {
+  background-image: url("images/fighting.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.career-flex-background {
+  display: flex;
+  justify-content: center;
+}
+
+.career-flex-container {
+  background-color: #1a1d1b;
+  width: 55%;
+  margin: 50px 0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.career-flex-bottom {
+  position: relative;
+  padding-top: 120px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.class-img {
+  z-index: 0;
+  height: 450px;
+  width: 350px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}
+
+.career-box-bottom {
+  background-color: #252926;
+  border: 2px #ffb000 solid;
+  filter: drop-shadow(25px 15px 5px #080808);
+  margin-left: 20%;
+  position: relative;
+  max-width: 70%;
+  z-index: 1;
+}
+
+/* Black list bar */
+.class-ul {
+  background-color: #080808;
+}
+.class-ul>ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.class-li {
+  list-style-type: none;
+  font-size: 1.3rem;
+  padding: 15px 3%;
+  cursor: pointer;
+}
+.class-active {
+  background-color: #ffb000;
+  color: #080808;
+}
+.class-li:hover {
+  background-color: #CE8B00;
+  color: #080808;
+}
+
+.career-bottom-text {
+  padding: 0px 30px;
+}
+
+.class-description {
+  min-height: 225px;
+}
+
+@media (width < 1200px) {
+  .career-box-bottom {
+    margin-left: 0;
+    max-width: 100%;
+    margin-top: 100px;
+  }
+
+  .class-img {
+    height: auto;
+    width: 65%;
+  }
+}
+
+@media (width < 610px){
+  .class-ul>ul {
+    flex-direction: column;
+  }
+
+  .career-box-bottom {
+    margin-top: 50px;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Hoxxes Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.hoxxes-body {
+  background-image: url("images/hoxxes.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.hoxxes-main-container {
+  margin-top: 20px;
+  display: flex;
+}
+
+/* Shared attributes in sections */
+.hoxxes-section {
+  padding: 0 1%;
+}
+.section-title {
+  border-top: 2px #ffb000 solid;
+  padding-bottom: 10px;
+}
+.section-paragraph {
+  color: #D5D5D5;
+  border-bottom: 2px #ffb000 solid;
+  padding-bottom: 10px;
+}
+
+@media(width < 1605px) {
+  .hoxxes-body {
+    background-position: left center;
+  }
+
+  .hoxxes-flex-container {
+    justify-content: flex-start;
+  }
+
+  .hoxxes-main-container {
+    flex-direction: column;
+  }
+
+  .hoxxes-section {
+    max-width: 625px;
+    padding-top: 25px;
+  }
+}
